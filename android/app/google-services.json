@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "42167985613",
+    "project_id": "chatt-b82fd"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42167985613:android:a2cb55656acae976",
+        "android_client_info": {
+          "package_name": "com.newapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42167985613-pctotve0l6haeev7naa42su038gn28ht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.newapplication",
+            "certificate_hash": "25aa362d535d68241b9aebfcb5ba17aec95156aa"
+          }
+        },
+        {
+          "client_id": "42167985613-2j9d9lg7g5es1ejbit668aitps3ebgha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkuESvNWAdoFU4_rfLCRKF3gfF8ROE4c0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

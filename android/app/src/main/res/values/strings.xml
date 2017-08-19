@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">newApplication</string>
+    <string name="facebook_app_id">1911361985779341</string>
+<string name="fb_login_protocol_scheme">fb1911361985779341</string>
+
+</resources>
