@@ -9,10 +9,11 @@ class Routing extends Component{
         return(
  <Router > 
 
-<Scene key = "chatRoomCon">
-     <Scene key="chatRoomCon" component={ChatRoomCon} hideNavBar = {true} />
+<Scene key = "fbloginCon">
      <Scene key="fbloginCon" component={LoginCon} hideNavBar = {true} />
      
+     <Scene key="chatRoomCon" component={ChatRoomCon} hideNavBar = {true} />
+    
      
           
         

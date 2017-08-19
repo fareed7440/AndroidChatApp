@@ -14,6 +14,9 @@ class ChatRoom extends Component {
          this.handleText = this.handleText.bind(this)
       
     }
+        componentDidMount(){
+            this.props.AllMessages()
+        }
 handleText = (evt)=>{
     evt.preventDefault();
   //  let name = this.props.
@@ -34,10 +37,21 @@ handleInput=(evt)=>{
 }
 
     render() {
+        const arr = [];
         const pic =  this.props.user ? this.props.user.picture.data.url : {}
           const name =  this.props.user ? this.props.user.name : {}
+          const message  = this.props.messages ? this.props.messages :{}
+           const helper = message[0];
+        for (var key in helper) {
+            console.log(helper[key])
+
+            arr.push(helper[key])
+            console.log(arr, 'arrr')
+
+          //console.log('mesage',message)
         console.log('pictureUrl' , pic)
          console.log('name' , name)
+         }
         return (
           <Container>
                 <Content>
@@ -52,18 +66,21 @@ handleInput=(evt)=>{
 
    <Card  style={styles.crd}>
        <ScrollView>
-            <CardItem header>
-              <Text>NativeBase</Text>
-            </CardItem>
-            <CardItem>
-              <Body>
-<Text>{name}</Text>
-              </Body>
-            </CardItem>
-            <CardItem footer>
+{
+    arr.map((val ,i)=>{
+        return(
+             <CardItem style  = {{backgroundColor : '#7FDBFF'}} key = {i+1}>
+               <Thumbnail style = {{height:20 , width:20}} source={{ uri: pic }} />
             
-                    
-            </CardItem>
+              <Right>
+                    <Text style = {{fontSize : 8,fontWeight : 'bold',marginRight : 170}}>{name}</Text>
+               <Text style = {{fontSize : 10 , color : 'grey',marginRight : 170}}>{val.text}</Text>
+              </Right>
+             </CardItem>
+        )
+    })
+}
+           
             </ScrollView>
          </Card>
           <Item regular>

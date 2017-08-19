@@ -7,7 +7,7 @@ function mapStateToProps(state){
     return{
         FblogedIn : state.LoginReducer,
         gmailLogedIn : state.GmailReducer,
-curentUser : state.LoginReducer.email
+        //curentUser : state.LoginReducer.email
     }
    
 }

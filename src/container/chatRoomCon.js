@@ -1,12 +1,14 @@
 import ChatRoom from '../components/chatRoom'
 import {connect} from 'react-redux'
 import chatRequest from '../store/actions/chatAct'
+import getMessageRequest from '../store/actions/getMessageAct'
 
 function mapStateToProps(state){
-    console.log('state', state.LoginReducer.login)
+    console.log('state',  state.MessageReducer.message)
     return{
 chatRoomData : state.ChatReducer,
-user : state.LoginReducer.login
+user : state.LoginReducer.login,
+messages : state.MessageReducer.message
 
     }
    
@@ -14,7 +16,8 @@ user : state.LoginReducer.login
 
 function mapDispatchToProps(dispatch){
 return{
-    chatData : (data)=>dispatch(chatRequest(data))
+    chatData : (data)=>dispatch(chatRequest(data)),
+      AllMessages : (data)=>dispatch(getMessageRequest(data))
 
 }
 }

@@ -40,14 +40,16 @@ function loginRequest(data) {
                         (data) => {
                             let accessToken = data.accessToken
                             //  alert(accessToken.toString())
-
+                            const todo = [];
                             const responseInfoCallback = (error, result) => {
                                 if (error) {
                                     console.log(error)
                                     alert('Error fetching data: ' + error.toString());
                                 } else {
                                     console.log("result", result)
-                                     dispatch(LoginRequestSuccess(result))
+                                  // todo.push(result);
+                                    dispatch(LoginRequestSuccess(result))
+                                    Actions.chatRoomCon()
                                     // alert('Success fetching data: ' + result.toString());
                                 }
                             }
@@ -74,8 +76,8 @@ function loginRequest(data) {
                             // Start the graph request.
                             new GraphRequestManager().addRequest(infoRequest).start()
                             console.log('info')
-                           
-                            Actions.chatRoomCon()
+
+
                         }
 
                     )
