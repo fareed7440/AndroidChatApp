@@ -69,11 +69,11 @@ handleInput=(evt)=>{
 {
     arr.map((val ,i)=>{
         return(
-             <CardItem style  = {{backgroundColor : '#7FDBFF'}} key = {i+1}>
+             <CardItem style  = {{height : 40 , borderBottomColor : 'black'}} key = {i+1}>
                <Thumbnail style = {{height:20 , width:20}} source={{ uri: pic }} />
             
               <Right>
-                    <Text style = {{fontSize : 8,fontWeight : 'bold',marginRight : 170}}>{name}</Text>
+                    <Text style = {{fontSize : 8,fontWeight : 'bold',marginRight : 210,marginTop : 10}}>{name}</Text>
                <Text style = {{fontSize : 10 , color : 'grey',marginRight : 170}}>{val.text}</Text>
               </Right>
              </CardItem>
@@ -127,6 +127,10 @@ const styles = StyleSheet.create({
 height:400
 
     },
+inpt : {
+fontSize:11, 
+
+},
     background: {
         backgroundColor: '#acbad1',
         justifyContent: 'center'
