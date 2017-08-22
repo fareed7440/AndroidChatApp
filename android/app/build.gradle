@@ -99,6 +99,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        multiDexEnabled  true
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -133,15 +134,45 @@ android {
 }
 
 dependencies {
+     compile project(':react-native-fbsdk')
+     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+     compile 'com.android.support:multidex:1.0.0'
+    compile project(':react-native-fcm')
+    //compile 'com.google.firebase:firebase-core:10.0.1'
+    //compile 'com.google.firebase:firebase-ads:9.2.1'
+  compile ("com.google.android.gms:play-services-base:10.2.1") {
+        force = true;
+    }
+    compile ('com.google.firebase:firebase-core:10.2.1') {
+        force = true;
+    }
+    compile ('com.google.firebase:firebase-auth:10.2.1') {
+        force = true;
+    }
+    compile ('com.google.firebase:firebase-analytics:10.2.1') {
+        force = true;
+    }
+    compile ('com.google.firebase:firebase-database:10.2.1') {
+        force = true;
+    }
+    compile ('com.google.firebase:firebase-storage:10.2.1') {
+        force = true;
+    }
+    compile ('com.google.firebase:firebase-messaging:10.2.1') {
+        force = true;
+    }
      compile(project(":react-native-google-signin")){         
         exclude group: "com.google.android.gms" // very important
     }
-    compile 'com.google.android.gms:play-services-auth:9.2.1' // should be at least 9.0.0
-    compile project(':react-native-fbsdk')
+    
+   compile 'com.google.android.gms:play-services-auth:10.2.1' // should be at least 9.0.0
+    // compile 'com.google.android.gms:play-services-auth:+'  // From node_modules
+   
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    
+    
 }
 
 apply plugin: 'com.google.gms.google-services'

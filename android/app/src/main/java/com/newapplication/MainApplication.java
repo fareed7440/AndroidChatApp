@@ -3,6 +3,7 @@ package com.newapplication;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.evollu.react.fcm.FIRMessagingPackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.react.ReactNativeHost;
@@ -33,6 +34,7 @@ protected static CallbackManager getCallbackManager() {
 protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new FIRMessagingPackage(),
             new RNGoogleSigninPackage(),
          // new FirestackPackage(),
           new FBSDKPackage(mCallbackManager)

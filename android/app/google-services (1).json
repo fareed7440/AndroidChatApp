@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "641387235221",
+    "firebase_url": "https://chatappnative.firebaseio.com",
+    "project_id": "chatappnative",
+    "storage_bucket": "chatappnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641387235221:android:a2cb55656acae976",
+        "android_client_info": {
+          "package_name": "com.newapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641387235221-1i2vd3f4ie2kv91prmm8mckufodua76u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChL2eVYzzLkiP3ntxGHYs5lvB6b_1AKAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

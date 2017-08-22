@@ -8,10 +8,11 @@ function gmailRequest(data){
     return dispatch=> {
 dispatch(GmailRequest());
 GoogleSignin.signIn().then((user)=>{
+      console.log('user',user)
      dispatch(GmailRequestSuccess(user))
- Actions.chatRoomCon()
+      Actions.chatRoomCon()
 
-    console.log('user',user)
+  
 }).catch((err)=>{
     console.log('wrong',err)
 }).done()

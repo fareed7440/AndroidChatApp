@@ -8,6 +8,7 @@ function mapStateToProps(state){
     return{
 chatRoomData : state.ChatReducer,
 user : state.LoginReducer.login,
+gUser : state.GmailReducer.gmail,
 messages : state.MessageReducer.message
 
     }
