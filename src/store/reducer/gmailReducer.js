@@ -1,11 +1,11 @@
 import ActionTypes from '../actions/actionTypes'
 
-const initialState = {}
+const initialState = {gmailLogin : false}
 
 function GmailReducer ( state = initialState ,action){
     switch(action.type){
         case ActionTypes.GMAIL_REQUEST_SUCCESS : 
-        return { ...state , gmail:action.data}
+        return { ...state , gmail:action.data, gmailLogin:true}
         default : return state
     }
 }

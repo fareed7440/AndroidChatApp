@@ -46,10 +46,13 @@ function loginRequest(data) {
                                     console.log(error)
                                     alert('Error fetching data: ' + error.toString());
                                 } else {
+                                    
                                     console.log("result", result)
                                   // todo.push(result);
                                     dispatch(LoginRequestSuccess(result))
                                     Actions.chatRoomCon()
+                                    
+                                    
                                     // alert('Success fetching data: ' + result.toString());
                                 }
                             }
@@ -80,7 +83,7 @@ function loginRequest(data) {
 
                         }
 
-                    )
+                    ).done()
                 }
             }
         )
