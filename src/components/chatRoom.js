@@ -88,7 +88,13 @@ componentWillMount(){
 
         componentDidMount(){
             this.props.AllMessages();
-               FCM.presentLocalNotification({
+             
+ 
+        }
+handleText = (evt)=>{
+    evt.preventDefault();
+     this.props.AllMessages();
+       FCM.presentLocalNotification({
       vibrate: 500,
       title: 'Hello',
       body: 'You Have Recieve A New Message',
@@ -96,10 +102,6 @@ componentWillMount(){
       show_in_foreground: true,
       picture: 'https://firebase.google.com/_static/af7ae4b3fc/images/firebase/lockup.png'
      });
- 
-        }
-handleText = (evt)=>{
-    evt.preventDefault();
     if(this.props.fblogin ==true){
 let text = this.state.text;
     let name = this.props.user.name
@@ -170,7 +172,7 @@ handleInput=(evt)=>{
 {
     arr.map((val ,i)=>{
         return(
-             <ListItem>
+             <ListItem key = {i+1}>
               <Thumbnail size={20} source={{ uri:val.pic }} />
               <Body>
                 <Text style = {{color : '#111111'}}>{val.name}</Text>

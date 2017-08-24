@@ -8,11 +8,17 @@ function getMessageRequest(data){
     console.log('datataa',data)
     return dispatch=> {
 dispatch(GetMessageRequest());
+  setTimeout(() => {
+
 return DB.database.ref('/messages').on('value',(snap)=>{
+    
   let Messages = snap.val()
-  console.log('messages', Messages)
-  arr.push(Messages)
+   console.log('messages', Messages)
+   arr.push(Messages)
   dispatch(GetMessageRequestSuccess(arr))
+
+   },0 )
+
 
 }
 )
