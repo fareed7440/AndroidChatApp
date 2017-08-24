@@ -173,10 +173,10 @@ handleInput=(evt)=>{
     arr.map((val ,i)=>{
         return(
              <ListItem key = {i+1}>
-              <Thumbnail size={20} source={{ uri:val.pic }} />
+              <Thumbnail size={10} source={{ uri:val.pic }} />
               <Body>
                 <Text style = {{color : '#111111'}}>{val.name}</Text>
-                <Text style = {{marginLeft : 120}} note>{val.text}</Text>
+                <Text style = {{marginLeft : 100}} note>{val.text}</Text>
               </Body>
             </ListItem>
         )
@@ -200,7 +200,7 @@ handleInput=(evt)=>{
               </Item>
 
               
-             <Button   style={styles.btn} onPress = {this.handleText}><Text>Send</Text></Button>
+             <Button   style={styles.btn} onPress = {this.handleText}><Text style={{  color : '#0074D9'}}>Send</Text></Button>
 
                </Content>
                </Container>
@@ -224,6 +224,7 @@ const styles = StyleSheet.create({
     },
     btn: {
        backgroundColor: 'transparent',
+     
       
     },
     crd: {
