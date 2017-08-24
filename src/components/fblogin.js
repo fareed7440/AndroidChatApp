@@ -10,15 +10,15 @@ class Login extends Component {
     this.onFbLogin = this.onFbLogin.bind(this);
     this.onGmailLogin = this.onGmailLogin.bind(this);
   }
-//   componentWillMount(){
-//     GoogleSignin.hasPlayServices({ autoResolve: true });
-//     GoogleSignin.configure({
-//   webClientId :"42167985613-2j9d9lg7g5es1ejbit668aitps3ebgha.apps.googleusercontent.com"
-// })
-// .then(() => {
-//   // you can now call currentUserAsync()
-// });
- // }
+  componentWillMount(){
+    GoogleSignin.hasPlayServices({ autoResolve: true });
+    GoogleSignin.configure({
+  webClientId :"42167985613-2j9d9lg7g5es1ejbit668aitps3ebgha.apps.googleusercontent.com"
+})
+.then(() => {
+  // you can now call currentUserAsync()
+});
+ }
 
 onFbLogin(){
   this.props.loginData()
